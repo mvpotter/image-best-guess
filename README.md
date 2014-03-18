@@ -20,7 +20,7 @@ finder = ImageBestGuessFinder()
 print(finder.find('http://media.tumblr.com/745c48c1dcf79c51f64f69c64d0cf095/tumblr_inline_ms5a0kJVT51qz4rgp.jpg')
 ```
 
-Used libraries:
+Used 3rd party libraries:
 --------------
 
   * [Requests](http://docs.python-requests.org/en/latest/)
