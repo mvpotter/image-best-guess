@@ -62,7 +62,11 @@ class ImageBestGuessFinder():
 	def find(self, image_url):
 		self._HEADERS['User-Agent'] = choice(self._UAS)
 		self._SEARCH_QUERY['image_url'] = image_url
-		r = requests.get(self._SEARCH_URL, headers=self._HEADERS, params=self._SEARCH_QUERY, timeout=3.0)
+		try:
+			r = requests.get(self._SEARCH_URL, headers=self._HEADERS, params=self._SEARCH_QUERY, timeout=3.0)
+		except requests.exceptions.Timeout:
+			print ('Request timeout reached')
+			return None
 		if r.ok:
 			parser = BestGuessHTMLParser(strict=False)
 			parser.feed(r.text);
