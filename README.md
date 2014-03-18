@@ -23,4 +23,4 @@ print(finder.find('http://media.tumblr.com/745c48c1dcf79c51f64f69c64d0cf095/tumb
 Used libraries:
 --------------
 
-  * (Requests)[http://docs.python-requests.org/en/latest/]
+  * [Requests](http://docs.python-requests.org/en/latest/)
